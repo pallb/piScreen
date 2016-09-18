@@ -26,7 +26,10 @@ function getWeather() {
         }else{
           var weatherText = weather.forecast[i].text;
         }
-        html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<em class="icon-'+weather.forecast[i].code+'"></em>'+'<br>'+ weatherText +'<br>'+ 'Hi '+weather.forecast[i].high+ '&deg; / Lo '+weather.forecast[i].low+'&deg;</li>';      }
+//        html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<em class="icon-'+weather.forecast[i].code+'"></em>'+'<br>'+ weatherText +'<br>'+ 'Hi '+weather.forecast[i].high+ '&deg; / Lo '+weather.forecast[i].low+'&deg;</li>';
+        html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<em class="icon-'+weather.forecast[i].code+'"></em>'+'<br>'+'<strong class="day">'+weather.forecast[i].high+ '&deg; / '+weather.forecast[i].low+'&deg;</strong></li>';
+
+ }
       html += '</ul>';
       //Don't forget to include the moment.js plugin.
       var timestamp = moment(weather.updated);
