@@ -12,7 +12,7 @@ function getWeather() {
     unit: 'f',
     success: function(weather) {
       html = '<strong class="city">'+weather.city+'</strong>';
-      html += '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<h2><i class="wi wi-yahoo-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       
      // html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
      // html += '<li class="currently">'+weather.currently+'</li>';
@@ -26,8 +26,7 @@ function getWeather() {
         }else{
           var weatherText = weather.forecast[i].text;
         }
-//        html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<em class="icon-'+weather.forecast[i].code+'"></em>'+'<br>'+ weatherText +'<br>'+ 'Hi '+weather.forecast[i].high+ '&deg; / Lo '+weather.forecast[i].low+'&deg;</li>';
-        html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<em class="icon-'+weather.forecast[i].code+'"></em>'+'<br>'+'<strong class="day">'+weather.forecast[i].high+ '&deg; / '+weather.forecast[i].low+'&deg;</strong></li>';
+       html += '<li>'+'<strong class="day">'+weather.forecast[i].day+'</strong>'+'<br>'+'<i class="rowI wi wi-yahoo-'+weather.forecast[i].code+'"></i>'+'<br>'+'<strong class="day">'+weather.forecast[i].high+ '&deg; / '+weather.forecast[i].low+'&deg;</strong></li>';
 
  }
       html += '</ul>';
